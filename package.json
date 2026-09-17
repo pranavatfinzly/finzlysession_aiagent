@@ -4,16 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "mastra dev",
+    "dev": "cross-env MASTRA_TELEMETRY_DISABLED=1 mastra dev",
     "build": "mastra build",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mastra/core": "^1.67.0",
+    "win-ca": "^3.5.1",
     "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
+    "@types/win-ca": "^3.5.4",
+    "cross-env": "^10.1.0",
     "mastra": "^1.30.0",
     "typescript": "^5.9.0"
   }
